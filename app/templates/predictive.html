@@ -1,0 +1,14 @@
+{% extends "layouts/base.html" %}
+{% block content %}
+<h2>Analyse Prédictive</h2>
+<form method="post">
+    {% for i in range(1, 5) %}
+        <label for="feature{{ i }}">Feature {{ i }}:</label>
+        <input type="text" name="feature{{ i }}" required><br>
+    {% endfor %}
+    <button type="submit">Prédire</button>
+</form>
+{% if prediction is not none %}
+    <h3>Résultat de prédiction : {{ prediction }}</h3>
+{% endif %}
+{% endblock %}
