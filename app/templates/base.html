@@ -1,0 +1,21 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Projet Flask Master{% endblock %}</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="sidebar">
+        <a href="{{ url_for('home') }}">Accueil</a>
+        <a href="{{ url_for('dashboard') }}">Dashboard BI</a>
+        <a href="{{ url_for('table') }}">Table</a>
+        <a href="{{ url_for('descriptive') }}">Analyse Descriptive</a>
+        <a href="{{ url_for('predictive') }}">Analyse Prédictive</a>
+    </div>
+    <div class="content">
+        {% block content %}{% endblock %}
+    </div>
+</body>
+</html>

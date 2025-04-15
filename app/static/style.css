@@ -1,0 +1,15 @@
+
+body { font-family: Arial; margin: 0; padding: 0; display: flex; }
+.sidebar {
+  width: 200px; background: #222; color: #fff; height: 100vh; padding-top: 20px;
+  display: flex; flex-direction: column;
+}
+.sidebar a {
+  color: white; text-decoration: none; padding: 10px; display: block;
+}
+.sidebar a:hover {
+  background: #444;
+}
+.content {
+  padding: 20px; flex-grow: 1;
+}
